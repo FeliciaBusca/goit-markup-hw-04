@@ -56,9 +56,6 @@ ul {
 a {
   text-decoration: none;
 }
-.hero-section {
-  background-color: var(--background-accent-color);
-}
 
 footer {
   background-color: var(--background-accent-color);
@@ -89,8 +86,39 @@ button {
 .contact-links-header {
   display: flex;
   justify-content: space-around;
-  width: 300px;
+  width: 350px;
+  gap: 40px;
 }
+.e-mail {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.phone-number {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.contact-links-header .e-mail-icon svg {
+  width: 16px;
+  height: 12px;
+  color: var(--text-color);
+}
+.contact-links-header .e-mail-icon svg:hover,
+.contact-links-header .e-mail-icon svg:focus {
+  color: var(--accent-color);
+}
+
+.contact-links-header .phone-number-icon svg {
+  width: 10px;
+  height: 16px;
+  color: var(--text-color);
+}
+.contact-links-header .phone-number-icon svg:hover,
+.contact-links-header .phone-number-icon svg:focus {
+  color: var(--accent-color);
+}
+
 .global-header .main-navigation,
 .global-header .main-navigation {
   font-family: var(--text-font-family);
@@ -162,10 +190,15 @@ footer address .contact-link-footer {
   border: 1px solid #ececec;
 }
 .hero-section {
+  background-color: var(--background-accent-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./images/hero-section-bg.jpg);
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-heading {
   width: 696px;
@@ -191,9 +224,10 @@ footer address .contact-link-footer {
   left: 700px;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px #00000026;
+  margin-top: 30px;
 }
 
-.what-we-offer-section {
+.what-we-offer-description {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,8 +235,27 @@ footer address .contact-link-footer {
   gap: 30px;
   padding-left: 215px;
   padding-right: 215px;
+  margin-top: 30px;
 }
 
+.icon-list-what-we-offer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.icon-list-what-we-offer .icon-list-item-benefits svg {
+  width: 70px;
+  height: 70px;
+}
+.icon-list-what-we-offer .icon-list-item-benefits {
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
 .what-we-offer-section .what-we-offer-heading {
   font-size: 14px;
   font-weight: 700;
@@ -230,6 +283,7 @@ footer address .contact-link-footer {
   padding-left: 215px;
   padding-right: 215px;
   gap: 30px;
+  margin-top: 50px;
 }
 .what-we-do-section .what-we-do-heading {
   font-size: 36px;
@@ -251,7 +305,7 @@ footer address .contact-link-footer {
 }
 .individual-card {
   width: 270px;
-  height: 368px;
+  height: 428px;
   top: 1635px;
   left: 815px;
   border-radius: 0px 0px 4px 4px;
@@ -262,6 +316,12 @@ footer address .contact-link-footer {
   box-shadow: 0px 1px 1px 0px #00000024;
 
   box-shadow: 0px 1px 3px 0px #0000001f;
+}
+.individual-card figcaption {
+  margin-top: 30px;
+}
+.individual-card figcaption h3 {
+  padding-bottom: 10px;
 }
 .our-team-section {
   background-color: #f5f4fa;
@@ -275,7 +335,13 @@ footer address .contact-link-footer {
   text-align: center;
   color: var(--heading-color);
 }
+.our-team-section .member {
+  box-shadow: 0px 2px 1px 0px #00000033;
 
+  box-shadow: 0px 1px 1px 0px #00000024;
+
+  box-shadow: 0px 1px 3px 0px #0000001f;
+}
 .our-team-section figcaption h3 {
   font-size: 16px;
   font-weight: 500;
@@ -293,11 +359,80 @@ footer address .contact-link-footer {
   color: var(--text-color);
 }
 
+.social-icon-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  margin-top: 16px;
+}
+.social-icon-list-link {
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-icon-list .social-icon-list-link:hover,
+.social-icon-list .social-icon-list-link:focus {
+  background-color: var(--accent-color);
+}
+.social-icon-list .social-icon-list-link svg {
+  fill: #afb1b8;
+  color: #afb1b8;
+}
+.social-icon-list .social-icon-list-link svg:hover,
+.social-icon-list .social-icon-list-link svg:focus {
+  fill: #fff;
+  color: #fff;
+}
+.social-icon-list-link svg {
+  width: 20px;
+  height: 20px;
+}
 .portfolio-navigation-list {
   display: flex;
   justify-content: center;
   gap: 8px;
 }
+
+.regular-customers-section .regular-customers-heading {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--heading-color);
+}
+.regular-customers-section .regular-customers-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  margin-bottom: 94px;
+}
+.regular-customers-list .regular-customer-icon svg {
+  width: 160px;
+  height: 60px;
+  color: #afb1b8;
+}
+.regular-customers-list .regular-customer-icon {
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+  border: 1px;
+  border: 1px solid #afb1b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.regular-customers-list .regular-customer-icon svg:hover,
+.regular-customers-list .regular-customer-icon svg:focus {
+  color: var(--accent-color);
+}
+
 .portfolio-navigation .portfolio-navigation-button {
   width: 120px;
   height: 38px;
@@ -313,7 +448,8 @@ footer address .contact-link-footer {
   color: var(--heading-color);
   border: none;
 }
-.portfolio-navigation .portfolio-navigation-button:hover {
+.portfolio-navigation .portfolio-navigation-button:hover,
+.portfolio-navigation .portfolio-navigation-button:focus {
   background-color: var(--accent-color);
   border-radius: 4px;
   box-shadow: 0px 3px 1px 0px #0000001a;
@@ -333,6 +469,14 @@ footer address .contact-link-footer {
   top: 262px;
   left: 215px;
   border: 1px solid #eeeeee;
+}
+.portfolio-project,
+.portfolio-project:hover {
+  box-shadow: 1px 4px 6px 0px #00000029;
+
+  box-shadow: 0px 4px 4px 0px #0000000f;
+
+  box-shadow: 0px 1px 1px 0px #0000001f;
 }
 .portfolio-items h3 {
   font-size: 18px;
@@ -362,6 +506,56 @@ footer address {
   padding-left: 215px;
   padding-top: 28px;
 }
+
+.footer-section {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 70px;
+}
 footer .footer-logo {
   padding-left: 215px;
+}
+
+footer h3 {
+  font-family: var(--text-font-family);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: var(--hero-heading-color);
+}
+
+.social-icon-list-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  margin-top: 16px;
+}
+.social-icon-list-link-footer {
+  width: 44px;
+  height: 44px;
+  background-color: #757575;
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-icon-list-footer .social-icon-list-link-footer:hover,
+.social-icon-list-footer .social-icon-list-link-footer:focus {
+  background-color: var(--accent-color);
+}
+.social-icon-list-footer .social-icon-list-link-footer svg {
+  color: #fff;
+}
+.social-icon-list-footer .social-icon-list-link-footer svg:hover,
+.social-icon-list-footer .social-icon-list-link-footer svg:focus {
+  fill: #fff;
+  color: #fff;
+}
+.social-icon-list-link-footer svg {
+  width: 20px;
+  height: 20px;
 }
